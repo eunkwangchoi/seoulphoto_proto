@@ -1,0 +1,29 @@
+.figure {
+  display: block;
+}
+
+.fullBleed {
+  margin-left: calc(-1 * var(--space-8));
+  margin-right: calc(-1 * var(--space-8));
+}
+
+.imageWrap {
+  overflow: hidden;
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.caption {
+  margin-top: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: rgba(17,17,17,0.5);
+  letter-spacing: 0.03em;
+  line-height: var(--leading-comfortable);
+}

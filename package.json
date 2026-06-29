@@ -1,0 +1,13 @@
+{
+  "name": "seoulphoto-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:center": "npm --workspace packages/seoul-photo-center run dev",
+    "dev:monthly": "npm --workspace packages/monthly-photography run dev",
+    "dev:auction": "npm --workspace packages/photo-auction run dev",
+    "build:all": "npm --workspaces run build --if-present"
+  }
+}

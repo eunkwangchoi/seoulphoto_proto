@@ -1,0 +1,119 @@
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--group-nav-height);
+  background-color: var(--color-black);
+  z-index: 1000;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--space-8);
+  gap: var(--space-8);
+}
+
+.logoMark {
+  flex-shrink: 0;
+}
+
+.logoText {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+.siteLinks {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  flex: 1;
+  justify-content: center;
+}
+
+.siteLink {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-caps);
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.siteLink:hover {
+  color: var(--color-white);
+}
+
+.siteLinkActive {
+  color: var(--color-white);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-shrink: 0;
+}
+
+.searchWrap {
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 2px;
+  color: var(--color-white);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  padding: 4px var(--space-2);
+  width: 140px;
+  outline: none;
+}
+
+.searchInput::placeholder {
+  color: rgba(255,255,255,0.35);
+}
+
+.searchInput:focus {
+  border-color: rgba(255,255,255,0.4);
+}
+
+.authLink {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.04em;
+  transition: color 0.2s ease;
+}
+
+.authLink:hover {
+  color: var(--color-white);
+}
+
+.authDivider {
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.2);
+}
+
+@media (max-width: 768px) {
+  .siteLinks {
+    gap: var(--space-4);
+  }
+
+  .searchWrap {
+    display: none;
+  }
+}
