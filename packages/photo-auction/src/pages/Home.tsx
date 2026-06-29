@@ -1,15 +1,7 @@
 import { useEffect, useState } from 'react'
 import { SiteHeader, GroupNav, EditorialLabel } from '@seoulphoto/design-system'
+import { auctionNavItems, SITE_NAME } from '../shared/nav'
 import styles from './Home.module.css'
-
-const navItems = [
-  { label: '경매', href: '#auction' },
-  { label: '마켓', href: '#market' },
-  { label: '작가', href: '#artists' },
-  { label: '뉴스', href: '#news' },
-  { label: '고객센터', href: '#' },
-  { label: 'KR', href: '#' },
-]
 
 const heroLots = [
   {
@@ -124,8 +116,8 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <SiteHeader
-        siteName="PHOTO AUCTION"
-        navItems={navItems}
+        siteName={SITE_NAME}
+        navItems={auctionNavItems}
         dark
       />
 

@@ -1,0 +1,322 @@
+.page {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  min-height: 100vh;
+}
+
+/* ── Page Header ───────────────────────────────────── */
+.pageHeader {
+  padding-top: var(--header-height);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.pageHeaderInner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-8) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.pageTitle {
+  font-family: var(--font-sans);
+  font-size: var(--text-2xl);
+  font-weight: 300;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+.pageSubtitle {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: rgba(255,255,255,0.4);
+}
+
+/* ── Filter Panel ──────────────────────────────────── */
+.filterPanel {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: var(--space-6) 0;
+  position: sticky;
+  top: var(--header-height);
+  z-index: 100;
+  background-color: var(--color-black);
+}
+
+.filterPanelInner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--space-8);
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.filterGroupLabel {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.25);
+  white-space: nowrap;
+}
+
+.filterOptions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.filterOpt {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.35);
+  padding: 4px 12px;
+  border: 1px solid transparent;
+  background: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.filterOpt:hover {
+  color: rgba(255,255,255,0.7);
+}
+
+.filterOptActive {
+  color: var(--color-white);
+  border-color: rgba(255,255,255,0.25);
+}
+
+.sortGroup {
+  margin-left: auto;
+}
+
+.sortSelect {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.5);
+  background-color: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 6px var(--space-4);
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.sortSelect option {
+  background-color: #222;
+  color: var(--color-white);
+}
+
+/* ── Works Grid ────────────────────────────────────── */
+.works {
+  padding: var(--space-8) var(--space-8) var(--space-16);
+}
+
+.worksHeader {
+  max-width: 1440px;
+  margin: 0 auto var(--space-8);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.worksCount {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.04em;
+}
+
+.worksGrid {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-8) var(--space-6);
+}
+
+.workCard {}
+
+.workLink {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  transition: opacity 0.2s ease;
+}
+
+.workLink:hover {
+  opacity: 0.82;
+}
+
+.workImageWrap {
+  position: relative;
+  overflow: hidden;
+  background-color: #1a1a1a;
+}
+
+.workImage {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.workImageWrap:hover .workImage {
+  transform: scale(1.03);
+}
+
+.newBadge {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  background-color: var(--color-terracotta);
+  color: var(--color-white);
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: var(--tracking-caps);
+  padding: 4px 8px;
+}
+
+.workMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.workArtist {
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+.workTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: rgba(255,255,255,0.55);
+}
+
+.workDetail {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.28);
+  letter-spacing: 0.04em;
+  margin-top: var(--space-1);
+}
+
+.workDimensions {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.22);
+  letter-spacing: 0.03em;
+}
+
+.workPrice {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 400;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.02em;
+  margin-top: var(--space-2);
+}
+
+/* ── Consignment CTA ───────────────────────────────── */
+.consignment {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: var(--space-24) var(--space-8);
+}
+
+.consignmentInner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-12);
+}
+
+.consignmentText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 600px;
+}
+
+.consignmentTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: 400;
+  color: var(--color-white);
+  line-height: var(--leading-tight);
+}
+
+.consignmentDesc {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 300;
+  line-height: var(--leading-comfortable);
+  color: rgba(255,255,255,0.5);
+}
+
+.consignmentBtn {
+  flex-shrink: 0;
+  display: inline-block;
+  padding: 14px var(--space-12);
+  background-color: var(--color-terracotta);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  letter-spacing: 0.06em;
+  color: var(--color-white);
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.consignmentBtn:hover {
+  opacity: 0.85;
+}
+
+/* ── Responsive ────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .worksGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .worksGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filterPanelInner {
+    gap: var(--space-4);
+  }
+
+  .consignmentInner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .filterOptions {
+    display: none;
+  }
+
+  .worksGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+}

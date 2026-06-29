@@ -1,0 +1,300 @@
+.page {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  min-height: 100vh;
+}
+
+/* ── Page Header ───────────────────────────────────── */
+.pageHeader {
+  padding-top: var(--header-height);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.pageHeaderInner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-8) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.pageTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  letter-spacing: var(--tracking-display);
+  color: var(--color-white);
+}
+
+.pageSubtitle {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: rgba(255,255,255,0.35);
+}
+
+/* ── Featured Artists ──────────────────────────────── */
+.featured {
+  padding: var(--space-12) var(--space-8);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.featuredInner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.featuredLabel {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+}
+
+.featuredGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.featuredCard {}
+
+.featuredLink {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  transition: opacity 0.2s ease;
+}
+
+.featuredLink:hover {
+  opacity: 0.82;
+}
+
+.featuredImageWrap {
+  position: relative;
+  overflow: hidden;
+  background-color: #1a1a1a;
+}
+
+.featuredImage {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.featuredImageWrap:hover .featuredImage {
+  transform: scale(1.03);
+}
+
+.featuredOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-4);
+  background: linear-gradient(transparent, rgba(0,0,0,0.6));
+}
+
+.featuredLotsCount {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-caps);
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+}
+
+.featuredInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.featuredName {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+.featuredNameEn {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 300;
+  color: rgba(255,255,255,0.38);
+  letter-spacing: 0.04em;
+}
+
+.featuredSpecialty {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.28);
+  letter-spacing: 0.04em;
+  margin-top: var(--space-1);
+}
+
+/* ── Browse ────────────────────────────────────────── */
+.browse {
+  padding: var(--space-12) var(--space-8) var(--space-32);
+}
+
+.browseInner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.browseHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.browseLabel {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+}
+
+.alphaNav {
+  display: flex;
+  gap: 0;
+  border: 1px solid rgba(255,255,255,0.08);
+  overflow: hidden;
+}
+
+.alphaLink {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.3);
+  padding: 8px 14px;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  white-space: nowrap;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.alphaLink:last-child {
+  border-right: none;
+}
+
+.alphaLink:hover {
+  color: var(--color-white);
+  background-color: rgba(255,255,255,0.04);
+}
+
+.alphaLinkActive {
+  color: var(--color-white);
+  background-color: rgba(255,255,255,0.06);
+}
+
+/* ── Artist Table ──────────────────────────────────── */
+.artistTable {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.artistRow {
+  display: grid;
+  grid-template-columns: 48px 1fr 80px 140px 60px 24px;
+  gap: var(--space-6);
+  align-items: center;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  transition: background-color 0.15s ease;
+}
+
+.artistRow:hover {
+  background-color: rgba(255,255,255,0.02);
+}
+
+.artistThumb {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.artistThumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.artistRowName {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.artistKorean {
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+.artistEnglish {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 300;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.04em;
+}
+
+.artistBirth,
+.artistSpecialty,
+.artistLots {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.28);
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.artistArrow {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.18);
+}
+
+/* ── Responsive ────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .featuredGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .artistRow {
+    grid-template-columns: 40px 1fr 60px;
+  }
+
+  .artistBirth,
+  .artistSpecialty,
+  .artistArrow {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .featuredGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,387 @@
+.page {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  min-height: 100vh;
+}
+
+/* ── Session Header ────────────────────────────────── */
+.sessionHeader {
+  padding-top: var(--header-height);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.sessionHeaderInner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-8) var(--space-8);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+.sessionMeta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.sessionTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  letter-spacing: var(--tracking-display);
+  color: var(--color-white);
+  line-height: var(--leading-tight);
+}
+
+.sessionTitleEn {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: rgba(255,255,255,0.38);
+  letter-spacing: 0.06em;
+}
+
+.sessionInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-top: var(--space-2);
+}
+
+.sessionInfoRow {
+  display: flex;
+  gap: var(--space-6);
+  align-items: baseline;
+}
+
+.sessionInfoKey {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-caps);
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+  min-width: 80px;
+  flex-shrink: 0;
+}
+
+.sessionInfoVal {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: rgba(255,255,255,0.7);
+  line-height: var(--leading-comfortable);
+}
+
+/* ── Filter Bar ────────────────────────────────────── */
+.filterBar {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  position: sticky;
+  top: var(--header-height);
+  z-index: 100;
+  background-color: var(--color-black);
+}
+
+.filterBarInner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 var(--space-8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filterTabs {
+  display: flex;
+  gap: 0;
+}
+
+.filterTab {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 2px solid transparent;
+  background: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.filterTab:hover {
+  color: rgba(255,255,255,0.7);
+}
+
+.filterTabActive {
+  color: var(--color-white);
+  border-bottom-color: var(--color-white);
+}
+
+.filterSort {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.sortLabel {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.04em;
+}
+
+.sortBtn {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.3);
+  background: none;
+  cursor: pointer;
+  padding: 4px var(--space-2);
+  border: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.sortBtn:hover {
+  color: rgba(255,255,255,0.7);
+}
+
+.sortBtnActive {
+  color: var(--color-white);
+  border-color: rgba(255,255,255,0.2);
+}
+
+/* ── Lots Grid ─────────────────────────────────────── */
+.lots {
+  padding: var(--space-12) var(--space-8) var(--space-16);
+}
+
+.lotsGrid {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-8) var(--space-6);
+}
+
+.lotCard {}
+
+.lotLink {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  transition: opacity 0.2s ease;
+}
+
+.lotLink:hover {
+  opacity: 0.82;
+}
+
+.lotImageWrap {
+  position: relative;
+  overflow: hidden;
+  background-color: #1a1a1a;
+}
+
+.lotImage {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.lotImageWrap:hover .lotImage {
+  transform: scale(1.03);
+}
+
+.lotNumBadge {
+  position: absolute;
+  bottom: var(--space-2);
+  left: var(--space-2);
+  background-color: rgba(17,17,17,0.75);
+  color: rgba(255,255,255,0.5);
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: var(--tracking-caps);
+  padding: 4px 8px;
+  text-transform: uppercase;
+}
+
+.lotStatusBadge {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  padding: 4px 8px;
+}
+
+.status_preview {
+  background-color: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.7);
+}
+
+.status_live {
+  background-color: var(--color-terracotta);
+  color: var(--color-white);
+}
+
+.status_sold {
+  background-color: rgba(90,95,67,0.85);
+  color: rgba(255,255,255,0.85);
+}
+
+.status_passed {
+  background-color: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.35);
+}
+
+.lotMeta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.lotArtist {
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+.lotTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+}
+
+.lotDetail {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.04em;
+  margin-top: var(--space-1);
+}
+
+.lotDimensions {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.03em;
+}
+
+.lotPricing {
+  margin-top: var(--space-2);
+  padding-top: var(--space-2);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lotEstimateLabel,
+.lotHammerLabel,
+.lotPassedLabel {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+}
+
+.lotEstimate {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.02em;
+}
+
+.lotHammerPrice {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: var(--color-terracotta);
+  letter-spacing: 0.02em;
+}
+
+.lotPassedLabel {
+  color: rgba(255,255,255,0.2);
+}
+
+/* ── Footer ────────────────────────────────────────── */
+.lotsFooter {
+  max-width: 1440px;
+  margin: var(--space-12) auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lotsCount {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.04em;
+}
+
+.loadMoreBtn {
+  padding: 12px var(--space-12);
+  border: 1px solid rgba(255,255,255,0.2);
+  background: none;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.loadMoreBtn:hover {
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
+/* ── Responsive ────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .lotsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .sessionHeaderInner {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .lotsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .filterTabs {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .filterTabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filterSort {
+    display: none;
+  }
+
+  .lotsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+}
