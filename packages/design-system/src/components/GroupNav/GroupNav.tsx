@@ -7,9 +7,9 @@ interface GroupNavProps {
 }
 
 const sites: { id: GroupNavSite; label: string; href: string }[] = [
-  { id: 'center',  label: '서울사진센터', href: 'http://localhost:5173' },
-  { id: 'monthly', label: '월간사진',     href: 'http://localhost:5174' },
-  { id: 'auction', label: '포토옥션',     href: 'http://localhost:5175' },
+  { id: 'center',  label: '서울사진센터', href: import.meta.env.VITE_URL_CENTER  ?? 'http://localhost:5173' },
+  { id: 'monthly', label: '월간사진',     href: import.meta.env.VITE_URL_MONTHLY ?? 'http://localhost:5174' },
+  { id: 'auction', label: '포토옥션',     href: import.meta.env.VITE_URL_AUCTION ?? 'http://localhost:5175' },
 ]
 
 export function GroupNav({ currentSite }: GroupNavProps) {
