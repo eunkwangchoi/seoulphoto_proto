@@ -26,6 +26,8 @@ export function SiteHeader({ siteName, navItems, dark = false, scrollTransparent
   const isDark = dark || (scrollTransparent && scrolled)
   const isTransparent = scrollTransparent && !scrolled
 
+  const [logoPrimary, logoSecondary] = siteName.split(' / ')
+
   return (
     <header
       className={[
@@ -36,7 +38,10 @@ export function SiteHeader({ siteName, navItems, dark = false, scrollTransparent
     >
       <div className={styles.inner}>
         <a href="/" className={styles.logo}>
-          <span className={styles.logoText}>{siteName}</span>
+          <span className={styles.logoText}>
+            <span className={styles.logoPrimary}>{logoPrimary}</span>
+            {logoSecondary && <span className={styles.logoSecondary}> / {logoSecondary}</span>}
+          </span>
         </a>
         <nav className={styles.nav} aria-label="메인 내비게이션">
           <ul className={styles.navList}>
