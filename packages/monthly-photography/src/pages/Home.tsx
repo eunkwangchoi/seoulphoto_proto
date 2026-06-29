@@ -1,14 +1,6 @@
 import { SiteHeader, GroupNav, EditorialLabel, Divider } from '@seoulphoto/design-system'
+import { monthlyNavItems } from '../shared/nav'
 import styles from './Home.module.css'
-
-const navItems = [
-  { label: '아트', href: '#art' },
-  { label: '포트폴리오', href: '#portfolio' },
-  { label: '인터뷰', href: '#interview' },
-  { label: '리뷰', href: '#review' },
-  { label: '아카이브', href: '#archive' },
-  { label: 'KR', href: '#' },
-]
 
 const columnItems = [
   {
@@ -36,7 +28,7 @@ export default function Home() {
     <div className={styles.page}>
       <SiteHeader
         siteName="월간사진 / MONTHLY PHOTOGRAPHY"
-        navItems={navItems}
+        navItems={monthlyNavItems}
         scrollTransparent
       />
 
