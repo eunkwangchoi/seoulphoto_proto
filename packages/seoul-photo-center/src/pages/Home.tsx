@@ -1,13 +1,6 @@
 import { SiteHeader, GroupNav, EditorialLabel } from '@seoulphoto/design-system'
+import { centerNavItems } from '../shared/nav'
 import styles from './Home.module.css'
-
-const navItems = [
-  { label: '전시', href: '#exhibitions' },
-  { label: '교육', href: '#education' },
-  { label: '아카이브', href: '#archive' },
-  { label: '뉴스', href: '#news' },
-  { label: 'KR', href: '#' },
-]
 
 const newsItems = [
   { date: '2026.06.25', title: '2026 하반기 교육 프로그램 참가자 모집 안내' },
@@ -20,7 +13,7 @@ export default function Home() {
     <div className={styles.page}>
       <SiteHeader
         siteName="서울사진센터 / SEOUL PHOTOGRAPHY CENTER"
-        navItems={navItems}
+        navItems={centerNavItems}
         scrollTransparent
       />
 

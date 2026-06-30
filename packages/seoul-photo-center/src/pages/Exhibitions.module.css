@@ -1,0 +1,390 @@
+.page {
+  background-color: var(--color-off-white);
+}
+
+/* ── Page Header ────────────────────────────────────── */
+.pageHeader {
+  padding: var(--space-16) var(--space-8) 0;
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.pageHeaderInner {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.pageTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl);
+  font-weight: 400;
+  letter-spacing: var(--tracking-display);
+  color: var(--color-black);
+}
+
+.pageSubtitle {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: rgba(17,17,17,0.45);
+  letter-spacing: 0.04em;
+}
+
+.catNav {
+  display: flex;
+  gap: 0;
+}
+
+.catTab {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  letter-spacing: 0.04em;
+  color: rgba(17,17,17,0.45);
+  padding: var(--space-3) var(--space-5);
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.catTab:first-child {
+  padding-left: 0;
+}
+
+.catTab:hover {
+  color: var(--color-black);
+}
+
+.catTabActive {
+  color: var(--color-black);
+  border-bottom-color: var(--color-black);
+}
+
+/* ── Section Label ──────────────────────────────────── */
+.sectionLabel {
+  margin-bottom: var(--space-8);
+}
+
+/* ── Current Exhibitions ────────────────────────────── */
+.current {
+  padding: var(--space-16) var(--space-8);
+}
+
+.currentGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.currentCard {
+  border-top: 1px solid var(--color-light-gray);
+  padding-top: var(--space-10);
+}
+
+.currentLink {
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  gap: var(--space-12);
+  align-items: start;
+  transition: opacity 0.2s ease;
+}
+
+.currentLink:hover {
+  opacity: 0.85;
+}
+
+.currentImageWrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.currentImage {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.currentLink:hover .currentImage {
+  transform: scale(1.02);
+}
+
+.currentBadge {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: var(--tracking-caps);
+  color: var(--color-white);
+  background: rgba(17,17,17,0.7);
+  padding: var(--space-1) var(--space-3);
+}
+
+.currentText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-top: var(--space-2);
+}
+
+.currentTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-display);
+  color: var(--color-black);
+}
+
+.currentSubtitle {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: rgba(17,17,17,0.55);
+  letter-spacing: 0.02em;
+  line-height: var(--leading-comfortable);
+}
+
+.currentMeta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.currentPeriod {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  letter-spacing: 0.06em;
+  color: rgba(17,17,17,0.6);
+}
+
+.currentLocation {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: rgba(17,17,17,0.45);
+}
+
+.currentDesc {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 300;
+  line-height: var(--leading-comfortable);
+  color: rgba(17,17,17,0.7);
+}
+
+.currentMore {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  letter-spacing: 0.06em;
+  color: var(--color-black);
+  border-bottom: 1px solid var(--color-black);
+  padding-bottom: 2px;
+  align-self: flex-start;
+  margin-top: var(--space-2);
+}
+
+/* ── Upcoming Exhibitions ────────────────────────────── */
+.upcoming {
+  padding: var(--space-16) var(--space-8);
+}
+
+.upcomingGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+
+.upcomingCard {
+  border-top: 1px solid var(--color-light-gray);
+  padding-top: var(--space-6);
+}
+
+.upcomingLink {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  transition: opacity 0.2s ease;
+}
+
+.upcomingLink:hover {
+  opacity: 0.8;
+}
+
+.upcomingImageWrap {
+  overflow: hidden;
+}
+
+.upcomingImage {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.upcomingLink:hover .upcomingImage {
+  transform: scale(1.03);
+}
+
+.upcomingText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.upcomingCategory {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: var(--tracking-caps);
+  color: rgba(17,17,17,0.45);
+  text-transform: uppercase;
+}
+
+.upcomingTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: 400;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-display);
+  color: var(--color-black);
+}
+
+.upcomingPeriod {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  letter-spacing: 0.04em;
+  color: rgba(17,17,17,0.55);
+}
+
+.upcomingLocation {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: rgba(17,17,17,0.4);
+}
+
+/* ── Past Exhibitions ───────────────────────────────── */
+.past {
+  padding: var(--space-16) var(--space-8);
+}
+
+.pastGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+
+.pastCard {
+  border-top: 1px solid var(--color-light-gray);
+  padding-top: var(--space-6);
+}
+
+.pastLink {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transition: opacity 0.2s ease;
+}
+
+.pastLink:hover {
+  opacity: 0.7;
+}
+
+.pastImageWrap {
+  overflow: hidden;
+}
+
+.pastImage {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%);
+  transition: transform 0.5s ease;
+}
+
+.pastLink:hover .pastImage {
+  transform: scale(1.03);
+}
+
+.pastText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.pastCategory {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: var(--tracking-caps);
+  color: rgba(17,17,17,0.4);
+  text-transform: uppercase;
+}
+
+.pastTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-display);
+  color: rgba(17,17,17,0.7);
+}
+
+.pastPeriod {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  letter-spacing: 0.04em;
+  color: rgba(17,17,17,0.4);
+}
+
+.pastMore {
+  margin-top: var(--space-10);
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid var(--color-light-gray);
+  padding-top: var(--space-8);
+}
+
+.pastMoreLink {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  letter-spacing: 0.06em;
+  color: var(--color-black);
+  transition: opacity 0.2s ease;
+}
+
+.pastMoreLink:hover {
+  opacity: 0.55;
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .upcomingGrid,
+  .pastGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pageHeader {
+    padding: var(--space-10) var(--space-4) 0;
+  }
+
+  .current,
+  .upcoming,
+  .past {
+    padding: var(--space-10) var(--space-4);
+  }
+
+  .currentLink {
+    grid-template-columns: 1fr;
+  }
+
+  .upcomingGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .pastGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+}

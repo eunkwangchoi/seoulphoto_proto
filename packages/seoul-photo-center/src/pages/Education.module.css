@@ -1,0 +1,333 @@
+.page {
+  background-color: var(--color-off-white);
+}
+
+/* ── Page Header ────────────────────────────────────── */
+.pageHeader {
+  padding: var(--space-16) var(--space-8) 0;
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.pageHeaderInner {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.pageTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl);
+  font-weight: 400;
+  letter-spacing: var(--tracking-display);
+  color: var(--color-black);
+}
+
+.pageSubtitle {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: rgba(17,17,17,0.45);
+  letter-spacing: 0.04em;
+}
+
+.catNav {
+  display: flex;
+  gap: 0;
+}
+
+.catTab {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  letter-spacing: 0.04em;
+  color: rgba(17,17,17,0.45);
+  padding: var(--space-3) var(--space-5);
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.catTab:first-child {
+  padding-left: 0;
+}
+
+.catTab:hover {
+  color: var(--color-black);
+}
+
+.catTabActive {
+  color: var(--color-black);
+  border-bottom-color: var(--color-black);
+}
+
+/* ── Intro ──────────────────────────────────────────── */
+.intro {
+  padding: var(--space-16) var(--space-8);
+}
+
+.introInner {
+  max-width: 680px;
+}
+
+.introText {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  font-weight: 300;
+  line-height: var(--leading-comfortable);
+  color: rgba(17,17,17,0.7);
+}
+
+/* ── Programs ───────────────────────────────────────── */
+.programs {
+  padding: var(--space-16) var(--space-8);
+}
+
+.sectionLabel {
+  margin-bottom: var(--space-8);
+}
+
+.programGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+
+.programCard {
+  border-top: 1px solid var(--color-light-gray);
+  padding-top: var(--space-6);
+}
+
+.programLink {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  transition: opacity 0.2s ease;
+}
+
+.programLink:hover {
+  opacity: 0.85;
+}
+
+.programImageWrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.programImage {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.programLink:hover .programImage {
+  transform: scale(1.03);
+}
+
+.statusBadge {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  padding: 3px var(--space-3);
+}
+
+.statusOpen {
+  background-color: var(--color-olive);
+  color: var(--color-white);
+}
+
+.statusClosing {
+  background-color: var(--color-terracotta);
+  color: var(--color-white);
+}
+
+.statusClosed {
+  background-color: rgba(17,17,17,0.35);
+  color: var(--color-white);
+}
+
+.programBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.programMeta {
+  display: flex;
+  align-items: center;
+}
+
+.programTitle {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: 400;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-display);
+  color: var(--color-black);
+}
+
+.programInstructor {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: rgba(17,17,17,0.55);
+}
+
+.programDetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-top: var(--space-1);
+}
+
+.programPeriod {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  letter-spacing: 0.04em;
+  color: rgba(17,17,17,0.6);
+}
+
+.programSchedule {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: rgba(17,17,17,0.45);
+}
+
+.programFeeRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+}
+
+.programFee {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+.programCapacity {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: rgba(17,17,17,0.45);
+}
+
+.applyLink {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  letter-spacing: 0.06em;
+  color: var(--color-black);
+  border-bottom: 1px solid var(--color-black);
+  padding-bottom: 2px;
+  align-self: flex-start;
+  margin-top: var(--space-2);
+}
+
+/* ── Application Guide ──────────────────────────────── */
+.guide {
+  padding: var(--space-24) var(--space-8);
+  background-color: var(--color-light-gray);
+}
+
+.guideInner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.guideTitle {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.guideTitleText {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  letter-spacing: var(--tracking-display);
+  color: var(--color-black);
+}
+
+.guideSteps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-8);
+}
+
+.guideStep {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.guideStepNum {
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl);
+  font-weight: 400;
+  color: var(--color-terracotta);
+  letter-spacing: -0.02em;
+}
+
+.guideStepLabel {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+.guideStepDesc {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 300;
+  line-height: var(--leading-comfortable);
+  color: rgba(17,17,17,0.65);
+}
+
+.guideContact {
+  padding-top: var(--space-8);
+  border-top: 1px solid rgba(17,17,17,0.15);
+}
+
+.guideContactText {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: rgba(17,17,17,0.6);
+}
+
+.guideContactLink {
+  color: var(--color-black);
+  border-bottom: 1px solid currentColor;
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .programGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .guideSteps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pageHeader,
+  .intro,
+  .programs,
+  .guide {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+
+  .programGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .guideSteps {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}
