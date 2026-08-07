@@ -1,6 +1,6 @@
 # Seoul Photo Group — Frontend Monorepo
 
-Three interconnected static sites sharing a unified design system.
+Four interconnected static sites sharing a unified design system.
 
 ## Structure
 
@@ -8,9 +8,10 @@ Three interconnected static sites sharing a unified design system.
 packages/
   design-system/        Shared tokens (CSS custom properties + TS constants)
                         + five shared React components
-  seoul-photo-center/   Site 1 — museum microsite   (port 5173)
-  monthly-photography/  Site 2 — editorial magazine  (port 5174)
-  photo-auction/        Site 3 — art auction catalog (port 5175)
+  seoul-photo-center/   Site 1 — museum microsite     (port 5173)
+  monthly-photography/  Site 2 — editorial magazine   (port 5174)
+  photo-auction/        Site 3 — art auction catalog  (port 5175)
+  kim-gallery/          Site 4 — 김영섭사진화랑        (port 5176)
 ```
 
 ## Running the sites
@@ -23,6 +24,7 @@ npm install
 npm run dev:center    # http://localhost:5173
 npm run dev:monthly   # http://localhost:5174
 npm run dev:auction   # http://localhost:5175
+npm run dev:kim       # http://localhost:5176
 
 # Or from a site's own directory
 cd packages/seoul-photo-center && npm run dev
@@ -38,7 +40,7 @@ Shared components:
 
 | Component | Description |
 |---|---|
-| `<GroupNav />` | Fixed 56px bottom bar linking all three sites |
+| `<GroupNav />` | Fixed 56px bottom bar linking all four sites |
 | `<SiteHeader />` | Minimal fixed header (transparent-scroll or always-dark variant) |
 | `<ImageBlock />` | Full-bleed image container with optional caption |
 | `<EditorialLabel />` | All-caps category label (olive / terracotta) |

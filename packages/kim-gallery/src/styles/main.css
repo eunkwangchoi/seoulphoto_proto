@@ -1,0 +1,5 @@
+body {
+  background-color: var(--color-off-white);
+  color: var(--color-black);
+  padding-bottom: var(--group-nav-height);
+}

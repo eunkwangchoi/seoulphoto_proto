@@ -17,6 +17,11 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      VITE_URL_CENTER:  https://eunkwangchoi.com/seoulphoto_proto/center/
+      VITE_URL_MONTHLY: https://eunkwangchoi.com/seoulphoto_proto/monthly/
+      VITE_URL_AUCTION: https://eunkwangchoi.com/seoulphoto_proto/auction/
+      VITE_URL_KIM:     https://eunkwangchoi.com/seoulphoto_proto/kim/
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -34,32 +39,29 @@ jobs:
         run: npm --workspace packages/seoul-photo-center run build
         env:
           VITE_BASE: /seoulphoto_proto/center/
-          VITE_URL_CENTER:  https://eunkwangchoi.com/seoulphoto_proto/center/
-          VITE_URL_MONTHLY: https://eunkwangchoi.com/seoulphoto_proto/monthly/
-          VITE_URL_AUCTION: https://eunkwangchoi.com/seoulphoto_proto/auction/
 
       - name: Build Monthly Photography
         run: npm --workspace packages/monthly-photography run build
         env:
           VITE_BASE: /seoulphoto_proto/monthly/
-          VITE_URL_CENTER:  https://eunkwangchoi.com/seoulphoto_proto/center/
-          VITE_URL_MONTHLY: https://eunkwangchoi.com/seoulphoto_proto/monthly/
-          VITE_URL_AUCTION: https://eunkwangchoi.com/seoulphoto_proto/auction/
 
       - name: Build Photo Auction
         run: npm --workspace packages/photo-auction run build
         env:
           VITE_BASE: /seoulphoto_proto/auction/
-          VITE_URL_CENTER:  https://eunkwangchoi.com/seoulphoto_proto/center/
-          VITE_URL_MONTHLY: https://eunkwangchoi.com/seoulphoto_proto/monthly/
-          VITE_URL_AUCTION: https://eunkwangchoi.com/seoulphoto_proto/auction/
+
+      - name: Build Kim Young Sup Gallery
+        run: npm --workspace packages/kim-gallery run build
+        env:
+          VITE_BASE: /seoulphoto_proto/kim/
 
       - name: Assemble site
         run: |
-          mkdir -p _site/center _site/monthly _site/auction
+          mkdir -p _site/center _site/monthly _site/auction _site/kim
           cp -r packages/seoul-photo-center/dist/.  _site/center/
           cp -r packages/monthly-photography/dist/.  _site/monthly/
           cp -r packages/photo-auction/dist/.        _site/auction/
+          cp -r packages/kim-gallery/dist/.          _site/kim/
           printf '<html><head><meta http-equiv="refresh" content="0;url=./center/"></head></html>' > _site/index.html
 
       - uses: actions/configure-pages@v4

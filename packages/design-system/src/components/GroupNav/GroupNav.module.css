@@ -37,6 +37,7 @@
   align-items: center;
   gap: var(--space-8);
   flex: 1;
+  min-width: 0;
   justify-content: center;
 }
 
@@ -109,11 +110,31 @@
 }
 
 @media (max-width: 768px) {
-  .siteLinks {
+  .inner {
+    padding: 0 var(--space-4);
     gap: var(--space-4);
   }
 
+  /* Four site names no longer fit — scroll them instead of clipping the actions. */
+  .siteLinks {
+    gap: var(--space-4);
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .siteLinks::-webkit-scrollbar {
+    display: none;
+  }
+
   .searchWrap {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .logoMark {
     display: none;
   }
 }
