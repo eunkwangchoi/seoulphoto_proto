@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main, claude/korean-photo-monorepo-evlsqp]
+    branches: [main, claude/korean-photo-monorepo-evlsqp, claude/kim-young-seop-gallery-check-dtocj1]
   workflow_dispatch:
 
 permissions:
